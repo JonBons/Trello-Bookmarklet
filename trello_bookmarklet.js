@@ -32,6 +32,11 @@
       // We're looking at a GitHub commit
       name = $(".js-current-repository").text().trim() + ": " + $(".commit .commit-title").text().trim();
       
+    } else if (typeof $BDSW !== "undefined" && $('#Main_txtIncidentID').length) {
+      
+      // We're looking at a BirdDog task
+      name = $("#Main_txtIncidentID").text() + ": " + $("#Main_txtReference").text();
+      
     } else if (jQuery('head meta[content=Redmine]').length) {
       
       // We're looking at a redmine issue
