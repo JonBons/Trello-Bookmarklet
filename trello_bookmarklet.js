@@ -32,7 +32,7 @@
       // We're looking at a GitHub commit
       name = $(".js-current-repository").text().trim() + ": " + $(".commit .commit-title").text().trim();
       
-    } else if (typeof $BDSW !== "undefined" && $('#Main_txtIncidentID').length) {
+    } else if ($('#Main_txtIncidentID').length) {
       
       debugger;
       
@@ -219,7 +219,7 @@
         next(null);
       } else {
         var script = document.createElement("script");
-        script.src = "//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
+        script.src = "https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js";
         script.onload = next;
         document.getElementsByTagName("head")[0].appendChild(script);
       }
