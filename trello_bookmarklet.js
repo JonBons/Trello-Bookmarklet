@@ -7,7 +7,7 @@
     // Default description is the URL of the page we're looking at
     var desc = location.href;
 
-    if(window.goBug) {
+    if(typeof window.goBug !== 'undefined') {
 
       // We're looking at a FogBugz case
       name = goBug.ixBug + ": " + goBug.sTitle
@@ -33,8 +33,6 @@
       name = $(".js-current-repository").text().trim() + ": " + $(".commit .commit-title").text().trim();
       
     } else if ($('#Main_txtIncidentID').length) {
-      
-      debugger;
       
       // We're looking at a BirdDog task
       name = $("#Main_txtIncidentID").val() + ": " + $("#Main_txtReference").val();
