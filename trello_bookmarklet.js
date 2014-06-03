@@ -34,6 +34,8 @@
       
     } else if (typeof $BDSW !== "undefined" && $('#Main_txtIncidentID').length) {
       
+      debugger;
+      
       // We're looking at a BirdDog task
       name = $("#Main_txtIncidentID").val() + ": " + $("#Main_txtReference").val();
       
