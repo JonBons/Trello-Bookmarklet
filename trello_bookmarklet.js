@@ -35,7 +35,7 @@
     } else if (typeof $BDSW !== "undefined" && $('#Main_txtIncidentID').length) {
       
       // We're looking at a BirdDog task
-      name = $("#Main_txtIncidentID").text() + ": " + $("#Main_txtReference").text();
+      name = $("#Main_txtIncidentID").val() + ": " + $("#Main_txtReference").val();
       
     } else if (jQuery('head meta[content=Redmine]').length) {
       
